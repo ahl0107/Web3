@@ -102,7 +102,7 @@ public struct TransactionOptions {
         case .withMargin(_):
             return suggestedByNode
         case .limited(let limit):
-            if limit <= suggestedByNode {
+            if limit > suggestedByNode {
                 return suggestedByNode
             }
             return nil
